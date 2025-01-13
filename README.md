@@ -4,9 +4,6 @@ VBA Code for Automatization
           
 This VBA macro automates a series of tasks for handling client-related workflows, such as creating folders, saving email                  attachments, and opening web pages. It is designed to be used in Microsoft Outlook or any VBA environment with email and file             handling capabilities. The macro guides the user through the process with a series of input prompts.
 
-Main Steps of the Workflow:
-**Folder Creation**:The user is prompted to enter a base path for creating client folders. It ensures the path ends with a backslash (\). The macro automatically creates two folders: one for the client (Client) and one for the mail attachments (MAIL).             
-
 **Open Web Pages**: The user is prompted to enter two URLs (web links). The macro opens both URLs in the default web browser.
 **Completion Message**: After all tasks are completed, a message box appears to notify the user that the client workflow has been       successfully completed.**
 
