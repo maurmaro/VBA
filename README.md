@@ -70,7 +70,7 @@ FolderExists.vbs:
                     Modify static paths, URLs, or file names to suit the specific environment or project.
 
 OpenWebPages.vbs:
-          This module provides a simple function to open a web page in the default web browser using Visual Basic for Applications (VBA).             It utilizes the Shell function to invoke the system's default browser (typically Internet Explorer or whichever browser is set as           default) to open the specified URL. 
+          This module provides a simple function to open a web page in the default web browser using Visual Basic for Applications (VBA).             It utilizes the Shell function to invoke the system's default browser (typically Internet Explorer or whichever browser is                set as default) to open the specified URL. 
           Function: OpenWebPages(URL As String)
           Purpose: The function allows users to open a web page in their default web browser by passing the URL as an argument.
 
