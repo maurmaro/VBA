@@ -19,3 +19,6 @@ CopyExcelValueToWordTemplate.vbs
           
           Prompts the user for the document template path, ensuring flexibility.
 
+FolderExists:
+          
+
