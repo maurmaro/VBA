@@ -1,0 +1,10 @@
+Sub FolderExists(OriginalFile As String, CopyFile As String)
+    
+    If Dir(CopyFile) <> "" Then
+            MsgBox "File exists."
+        Else
+            FileCopy OriginalFile, CopyFile
+            MsgBox OriginalFile & "The file has been copied!"
+    End If
+
+End Sub
