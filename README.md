@@ -1,33 +1,45 @@
 # VBA
 VBA Code for Automatization
-
-This VBA macro automates a series of tasks for handling client-related workflows, such as creating folders, saving email attachments, and opening web pages. It is designed to be used in Microsoft Outlook or any VBA environment with email and file handling capabilities. The macro guides the user through the process with a series of input prompts.
+AutomateClientWorkflowGeneric: 
+          This VBA macro automates a series of tasks for handling client-related workflows, such as creating folders, saving email                  attachments, and opening web pages. It is designed to be used in Microsoft Outlook or any VBA environment with email and file             handling capabilities. The macro guides the user through the process with a series of input prompts.
 
 Main Steps of the Workflow:
-Folder Creation:
+          Folder Creation:
 
-The user is prompted to enter a base path for creating client folders. It ensures the path ends with a backslash (\).
-The macro automatically creates two folders: one for the client (Client) and one for the mail attachments (MAIL).
+                    The user is prompted to enter a base path for creating client folders. It ensures the path ends with a backslash (\).
+                    The macro automatically creates two folders: one for the client (Client) and one for the mail attachments (MAIL).
+                    
 Email Attachment Handling:
-
-The user is asked to select an email from their active Outlook window.
-If the selected email contains attachments, these attachments are saved into the client's folder with a date-stamped filename. The number of attachments saved is shown to the user.
+                    The user is asked to select an email from their active Outlook window.
+                    If the selected email contains attachments, these attachments are saved into the client's folder with a date-stamped                      filename. The number of attachments saved is shown to the user.
 Open Web Pages:
-
-The user is prompted to enter two URLs (web links). The macro opens both URLs in the default web browser.
+                    The user is prompted to enter two URLs (web links). The macro opens both URLs in the default web browser.
 Completion Message:
-
-After all tasks are completed, a message box appears to notify the user that the client workflow has been successfully completed.
+                    After all tasks are completed, a message box appears to notify the user that the client workflow has been                                 successfully completed.
 Functionality Breakdown:
-Folder Creation (CreateFolder helper function):
-
-The macro ensures that the folder structure exists. If the folder does not exist, the CreateFolder function is invoked to create it.
+                    Folder Creation (CreateFolder helper function):
+                    The macro ensures that the folder structure exists. If the folder does not exist, the CreateFolder function is                            invoked to create it.
 Saving Email Attachments:
-
-The macro checks if there are any attachments in the selected email and saves them to the client's folder with a date-specific filename.
+                    The macro checks if there are any attachments in the selected email and saves them to the client's folder with a 
+                    date-specific filename.
 Opening Web Pages:
+                    The macro allows the user to open two specified URLs in the default web browser using the OpenWebPages helper                             function.
 
-The macro allows the user to open two specified URLs in the default web browser using the OpenWebPages helper function.
+Helper Functions:
+                    CreateFolder(FolderPath As String):
+
+                    This function checks if a folder exists at the specified FolderPath. If the folder doesn't exist, it creates the                          folder using MkDir.
+
+OpenWebPages(URL As String):
+
+                    This function opens the provided URL in the system's default web browser using explorer.exe. The Shell function is                        used to execute this command.
+Usage:
+                    Run the AutomateClientWorkflowGeneric subroutine from the VBA editor.
+                    Follow the prompts to enter the base path for folders, client name, and URLs.
+                    The macro will create the necessary folders, save email attachments, and open the specified web pages.
+Notes:
+                    The macro relies on the Outlook object model (for selecting emails) and the system's file management system (for                          folder creation and file saving).
+                    It also assumes that the user has access to the required file system and that Outlook is properly configured.
 
 CopyExcelValueToWordTemplate.vbs
           Generic Module:
